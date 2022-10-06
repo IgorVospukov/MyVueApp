@@ -1,8 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import ReviewForm from "./Form/ReviewForm.vue";
-import Button1App from "./Buttons/Button1App.vue";
-//import Button1App1 from "./Buttons/Button1App.vue";
+import ModalApp from "./Modal/ModalApp.vue";
 
 let flag = ref(false);
 const showModal = () => {
@@ -24,10 +23,7 @@ const showModal = () => {
         Submit
       </button>
     </div>
-    <div class="my-mod" v-show="flag">
-      <p class="text-modal">Form is sent !</p>
-    </div>
-    <Button1App>Abbbk</Button1App>
+    <ModalApp />
   </section>
 </template>
 <style scoped>
@@ -46,23 +42,5 @@ const showModal = () => {
 }
 .myclass {
   width: 200px;
-}
-.my-mod {
-  position: absolute;
-  display: grid;
-  grid-template-columns: 1fr;
-  place-items: center;
-  left: 50%;
-  top: 10%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 100px;
-  border: 2px solid rgba(35, 247, 16, 0.764);
-  border-radius: 10px;
-  opacity: 0.5;
-}
-.text-modal {
-  margin: 0;
-  color: rgba(35, 247, 16, 0.964);
 }
 </style>

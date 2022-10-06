@@ -1,9 +1,8 @@
 <script setup>
-import { defineProps, defineEmits, ref, watch } from "vue";
+import { ref, watch, defineProps, defineEmits } from "vue";
 const emits = defineEmits(["update:modelValue"]);
 const props = defineProps({
   modelValue: String,
-  placeholder: String,
   type: {
     type: String,
     default: "text",
@@ -18,15 +17,22 @@ watch(value, () => {
 });
 </script>
 <template>
-  <div class="for-input1">
-    <p>First Name*</p>
+  <div class="for-input3">
+    <p class="company">Company*</p>
     <input
       v-if="type === 'text'"
       :type="type"
-      v-model="review.fitText1"
-      :placeholder="placeholder"
+      placeholder="Enter Your Company"
     />
     <input v-else />
   </div>
 </template>
-<style scoped></style>
+<style scoped>
+.company {
+  margin: 0;
+}
+.for-input3 {
+  width: 278px;
+  height: 40px;
+}
+</style>

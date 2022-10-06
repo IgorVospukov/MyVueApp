@@ -12,7 +12,7 @@ const app = createApp(App);
 app.use(createPinia());
 app.use(bootstrap);
 app.use(VueScrollTo, {
-  duration: 50,
+  duration: 500,
   easing: "ease",
   offset: 0,
   force: true,

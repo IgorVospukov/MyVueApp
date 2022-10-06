@@ -25,6 +25,5 @@ import Section6App from "./components/Section6App.vue";
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  width: 100%;
 }
 </style>

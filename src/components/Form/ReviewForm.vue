@@ -1,8 +1,15 @@
 <script setup>
 import { reactive } from "vue";
-import UiinputApp1 from "./UIinpit/UiinputApp1.vue";
+import Uiinput1App from "./UIinpit/Uiinput1App.vue";
+import Uiinput2App from "./UIinpit/Uiinput2App.vue";
+import Uiinput3App from "./UIinpit/Uiinput3App.vue";
+import Uiinput4App from "./UIinpit/Uiinput4App.vue";
+import Uiinput5App from "./UIinpit/Uiinput5App.vue";
+import Uiinput6App from "./UIinpit/Uiinput6App.vue";
+import Uiinput7App from "./UIinpit/Uiinput7App.vue";
+import Uiinput8App from "./UIinpit/Uiinput8App.vue";
 const review = reactive({
-  fitText1: "11",
+  fitText1: "",
   fitText2: "",
   fitText3: "",
   fitText4: "",
@@ -11,83 +18,20 @@ const review = reactive({
   fitText7: "",
   fitText8: "",
 });
-const submit = () => {
-  console.log("submit!");
-};
 </script>
 <template>
   <form @submit.prevent.stop="submit" class="for-form">
     <div class="for-inputs1-4">
-      <UiinputApp1
-        v-model="review.fitText1"
-        type="text"
-        placeholder="Enter Your Name"
-      />
-      <UiinputApp v-model="review.fitText2" />
-      <UiinputApp v-model="review.fitText3" />
-      <UiinputApp v-model="review.fitText4" />
-      <UiinputApp v-model="review.fitText5" />
-      <UiinputApp v-model="review.fitText6" />
-      <UiinputApp v-model="review.fitText7" />
-      <UiinputApp v-model="review.fitText8" />
-      <div class="for-input2">
-        <p>Last Name*</p>
-        <input
-          type="text"
-          v-model="review.fitText2"
-          placeholder="Enter Your Last Name"
-        />
-      </div>
-      <div class="for-input3">
-        <p>Company*</p>
-        <input
-          type="text"
-          v-model="review.fitText3"
-          placeholder="Enter Your Company"
-        />
-      </div>
-      <div class="for-input4">
-        <p>Email*</p>
-        <input
-          type="email"
-          v-model="review.fitText4"
-          placeholder="Enter Your Email"
-        />
-      </div>
+      <Uiinput1App v-model="review.fitText1" type="text" />
+      <Uiinput2App v-model="review.fitText2" type="text" />
+      <Uiinput3App v-model="review.fitText3" type="text" />
+      <Uiinput4App v-model="review.fitText4" type="email" />
     </div>
     <div class="for-inputs5-8">
-      <div class="for-input5">
-        <p>Job Title*</p>
-        <input
-          type="text"
-          v-model="review.fitText5"
-          placeholder="Enter Your Job Title"
-        />
-      </div>
-      <div class="for-input6">
-        <p>Country*</p>
-        <input
-          type="text"
-          v-model="review.fitText6"
-          placeholder="Enter Your Country"
-        />
-      </div>
-      <div class="for-input7">
-        <p>State*</p>
-        <input
-          type="text"
-          v-model="review.fitText7"
-          placeholder="Enter Your State"
-        />
-      </div>
-      <div class="for-input8">
-        <p>Zip Code*</p>
-        <input
-          type="password"
-          v-model="review.fitText8"
-          placeholder="Enter Your Zip Code"
-        />
-      </div>
+      <Uiinput5App v-model="review.fitText5" type="text" />
+      <Uiinput6App v-model="review.fitText6" type="text" />
+      <Uiinput7App v-model="review.fitText7" type="text" />
+      <Uiinput8App v-model="review.fitText8" type="password" />
     </div>
   </form>
 </template>
@@ -98,28 +42,15 @@ const submit = () => {
   grid-template-rows: 1fr 1fr;
 }
 .for-inputs1-4 {
+  grid-row: 1/2;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 14px;
 }
 .for-inputs5-8 {
+  grid-row: 2/3;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 14px;
-}
-.for-inputs1-4 > div > p {
-  margin: 3px;
-}
-.for-inputs1-4 > div > input {
-  width: 278px;
-  height: 40px;
-}
-
-.for-inputs5-8 > div > p {
-  margin: 3px;
-}
-.for-inputs5-8 > div > input {
-  width: 278px;
-  height: 40px;
 }
 </style>
