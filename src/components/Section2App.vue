@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <section ref="2" class="container-section2">
+  <section id="about" class="container-section2">
     <div class="wrapper-left">
       <div class="for-text">
         <h2 class="about-us">About us</h2>

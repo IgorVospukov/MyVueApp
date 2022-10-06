@@ -26,7 +26,7 @@ const DATA = ref([
 ]);
 </script>
 <template>
-  <section ref="3" class="container-section3">
+  <section id="frameworks" class="container-section3">
     <div class="wrapper-div" v-for="item in DATA" :key="item.id">
       <div>
         {{ item.name }}

@@ -2,7 +2,7 @@
 <template>
   <div class="button-left">
     <button type="button" class="btn btn-primary btn-lg myclass">
-      <slot :title="title"></slot>
+      <slot></slot>
     </button>
   </div>
 </template>

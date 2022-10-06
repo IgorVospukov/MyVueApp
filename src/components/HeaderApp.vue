@@ -1,30 +1,29 @@
-<script setup>
-// const menuEl2 = document.querySelector("#2")
-// const menuEl3 = document.querySelector("#3");
-// const menuEl4 = document.querySelector("#4");
-let scroll = (refName) => {
-  refName.scrollIntoView();
-};
-</script>
+<script setup></script>
 <template>
   <div class="container">
     <img class="my-logo" src="../assets/logo.png" alt="my-logo" />
     <div class="nav">
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">HOME</a>
+          <a class="nav-link" aria-current="page" href="#" v-scroll-to="'#home'"
+            >HOME
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" @click="scroll(test1)">ABOUT US</a>
+          <a class="nav-link" href="#" v-scroll-to="'#about'">ABOUT US</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" @click="scroll">FRAMEWORKS</a>
+          <a class="nav-link" href="#" v-scroll-to="'#frameworks'"
+            >FRAMEWORKS</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" @click="scroll">APPLICATIONS</a>
+          <a class="nav-link" href="#" v-scroll-to="'#applications'"
+            >APPLICATIONS</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" @click="scroll">CONTACT US</a>
+          <a class="nav-link" href="#" v-scroll-to="'#contact'">CONTACT US</a>
         </li>
       </ul>
     </div>

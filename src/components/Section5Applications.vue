@@ -45,7 +45,7 @@ const DATA2 = ref([
 ]);
 </script>
 <template>
-  <section ref="5" class="container-section5">
+  <section id="applications" class="container-section5">
     <h1 class="for-app">Applications</h1>
     <div class="wrapper-div5">
       <figure class="for-image10" v-for="item in DATA2" :key="item.id">
@@ -78,9 +78,9 @@ const DATA2 = ref([
   grid-column: 1/2;
   grid-row: 2/3;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(225px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(227px, auto));
   grid-template-rows: auto;
-  column-gap: 10px;
+  column-gap: 96px;
   row-gap: 30px;
   /* place-items: center; */
 }
