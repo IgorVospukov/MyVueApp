@@ -14,16 +14,16 @@
         </p>
       </div>
       <div class="for-buttons">
-        <span class="button-left">
+        <div class="button-left">
           <button type="button" class="btn btn-primary btn-lg myclass">
             Read More
           </button>
-        </span>
-        <span class="button-right">
+        </div>
+        <div class="button-right">
           <button type="button" class="btn btn-secondary btn-lg myclass2">
             Contact Us
           </button>
-        </span>
+        </div>
       </div>
     </div>
     <div class="wrapper-right">
@@ -63,6 +63,9 @@
   width: 80%;
 }
 .for-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
   grid-column: 1/2;
   grid-row: 2/3;
 }

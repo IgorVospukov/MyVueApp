@@ -6,6 +6,7 @@ import Section3FrameWorks from "./components/Section3FrameWorks.vue";
 import Section4App from "./components/Section4App.vue";
 import Section5Applications from "./components/Section5Applications.vue";
 import Section6App from "./components/Section6App.vue";
+import FooterApp from "./components/FooterApp.vue";
 </script>
 
 <template>
@@ -17,6 +18,7 @@ import Section6App from "./components/Section6App.vue";
     <Section4App />
     <Section5Applications />
     <Section6App />
+    <FooterApp />
   </div>
 </template>
 

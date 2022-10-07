@@ -8,6 +8,7 @@ import Uiinput5App from "./UIinpit/Uiinput5App.vue";
 import Uiinput6App from "./UIinpit/Uiinput6App.vue";
 import Uiinput7App from "./UIinpit/Uiinput7App.vue";
 import Uiinput8App from "./UIinpit/Uiinput8App.vue";
+
 const review = reactive({
   fitText1: "",
   fitText2: "",
@@ -31,7 +32,7 @@ const review = reactive({
       <Uiinput5App v-model="review.fitText5" type="text" />
       <Uiinput6App v-model="review.fitText6" type="text" />
       <Uiinput7App v-model="review.fitText7" type="text" />
-      <Uiinput8App v-model="review.fitText8" type="password" />
+      <Uiinput8App v-model="review.fitText8" type="number"></Uiinput8App>
     </div>
   </form>
 </template>
@@ -45,12 +46,15 @@ const review = reactive({
   grid-row: 1/2;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px;
   column-gap: 14px;
+  place-items: center;
 }
 .for-inputs5-8 {
   grid-row: 2/3;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 14px;
+  place-items: center;
 }
 </style>

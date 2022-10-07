@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from "vue";
 import ReviewForm from "./Form/ReviewForm.vue";
-import ModalApp from "./Modal/ModalApp.vue";
 
 let flag = ref(false);
 const showModal = () => {
@@ -12,7 +11,7 @@ const showModal = () => {
 <template>
   <section id="contact" class="container-section6">
     <h1 class="for-contacts">Contact Us</h1>
-    <ReviewForm />
+    <ReviewForm class="container-form" />
     <div class="button-left">
       <button
         type="button"
@@ -23,7 +22,9 @@ const showModal = () => {
         Submit
       </button>
     </div>
-    <ModalApp />
+    <div class="my-mod" v-show="flag">
+      <p class="text-modal">Form is sent !</p>
+    </div>
   </section>
 </template>
 <style scoped>
@@ -31,10 +32,18 @@ const showModal = () => {
   display: grid;
   position: relative;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 115px 1fr 120px;
   padding-left: 120px;
   padding-right: 120px;
   margin-bottom: 60px;
+  background-color: #ffffff;
+}
+.for-contacts {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+  margin: 0;
 }
 .button-left {
   align-self: center;
@@ -42,5 +51,27 @@ const showModal = () => {
 }
 .myclass {
   width: 200px;
+}
+.my-mod {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 100px;
+  border: 2px solid rgb(47, 175, 255);
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+.container-form {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.text-modal {
+  margin: 0;
+  color: rgb(47, 175, 255);
 }
 </style>

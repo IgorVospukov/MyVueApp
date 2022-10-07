@@ -18,21 +18,26 @@ watch(value, () => {
 </script>
 <template>
   <div class="for-input4">
-    <p class="name">First Name*</p>
+    <p class="name">Email*</p>
     <input
+      class="single-input"
       v-if="type === 'email'"
       :type="type"
-      placeholder="Enter Your First Name"
+      placeholder="Enter Your Email"
     />
     <input v-else class="warn" />
   </div>
 </template>
 <style scoped>
 .name {
-  margin: 0;
+  margin-bottom: 5px;
 }
-.for-input4 {
+.single-input {
   width: 278px;
   height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #c4c4c4;
+  padding-left: 5px;
 }
 </style>

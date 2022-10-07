@@ -5,9 +5,9 @@ const props = defineProps({
   modelValue: String,
   type: {
     type: String,
-    default: "text",
+    default: "number",
     validator: (value) => {
-      return ["text"].includes(value);
+      return ["number"].includes(value);
     },
   },
 });
@@ -18,21 +18,26 @@ watch(value, () => {
 </script>
 <template>
   <div class="for-input8">
-    <p class="name">First Name*</p>
+    <p class="name">Zip code*</p>
     <input
-      v-if="type === 'text'"
+      class="single-input"
+      v-if="type === 'number'"
       :type="type"
-      placeholder="1"
+      placeholder="Enter Your Zip code"
     />
     <input v-else class="warn" />
   </div>
 </template>
 <style scoped>
 .name {
-  margin: 0;
+  margin-bottom: 5px;
 }
-.for-input8 {
+.single-input {
   width: 278px;
   height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #c4c4c4;
+  padding-left: 5px;
 }
 </style>

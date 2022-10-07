@@ -20,6 +20,7 @@ watch(value, () => {
   <div class="for-input3">
     <p class="company">Company*</p>
     <input
+      class="single-input"
       v-if="type === 'text'"
       :type="type"
       placeholder="Enter Your Company"
@@ -29,10 +30,14 @@ watch(value, () => {
 </template>
 <style scoped>
 .company {
-  margin: 0;
+  margin-bottom: 5px;
 }
-.for-input3 {
+.single-input {
   width: 278px;
   height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #c4c4c4;
+  padding-left: 5px;
 }
 </style>
