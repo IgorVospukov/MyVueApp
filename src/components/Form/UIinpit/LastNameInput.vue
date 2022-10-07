@@ -17,19 +17,19 @@ watch(value, () => {
 });
 </script>
 <template>
-  <div class="for-input6">
-    <p class="name">Country*</p>
+  <div class="for-input2">
+    <p class="last-name">LastName*</p>
     <input
       class="single-input"
       v-if="type === 'text'"
       :type="type"
-      placeholder="Enter Your Country"
+      placeholder="Enter Your LastName"
     />
     <input v-else class="warn" />
   </div>
 </template>
 <style scoped>
-.name {
+.last-name {
   margin-bottom: 5px;
 }
 .single-input {
@@ -38,6 +38,13 @@ watch(value, () => {
   border-radius: 10px;
   border: none;
   background-color: #c4c4c4;
+  padding-left: 5px;
+}
+.warn {
+  width: 278px;
+  height: 40px;
+  border-radius: 10px;
+  border: red;
   padding-left: 5px;
 }
 </style>

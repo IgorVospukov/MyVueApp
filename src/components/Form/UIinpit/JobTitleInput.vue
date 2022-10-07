@@ -40,4 +40,11 @@ watch(value, () => {
   background-color: #c4c4c4;
   padding-left: 5px;
 }
+.warn {
+  width: 278px;
+  height: 40px;
+  border-radius: 10px;
+  border: red;
+  padding-left: 5px;
+}
 </style>

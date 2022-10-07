@@ -1,13 +1,13 @@
 <script setup>
 import { reactive } from "vue";
-import Uiinput1App from "./UIinpit/Uiinput1App.vue";
-import Uiinput2App from "./UIinpit/Uiinput2App.vue";
-import Uiinput3App from "./UIinpit/Uiinput3App.vue";
-import Uiinput4App from "./UIinpit/Uiinput4App.vue";
-import Uiinput5App from "./UIinpit/Uiinput5App.vue";
-import Uiinput6App from "./UIinpit/Uiinput6App.vue";
-import Uiinput7App from "./UIinpit/Uiinput7App.vue";
-import Uiinput8App from "./UIinpit/Uiinput8App.vue";
+import FirstNameInput from "./UIinpit/FirstNameInput.vue";
+import LastNameInput from "./UIinpit/LastNameInput.vue";
+import CompanyInput from "./UIinpit/CompanyInput.vue";
+import EmailInput from "./UIinpit/EmailInput.vue";
+import JobTitleInput from "./UIinpit/JobTitleInput.vue";
+import CountryInput from "./UIinpit/CountryInput.vue";
+import StateInput from "./UIinpit/StateInput.vue";
+import ZipCodeInput from "./UIinpit/ZipCodeInput.vue";
 
 const review = reactive({
   fitText1: "",
@@ -23,16 +23,16 @@ const review = reactive({
 <template>
   <form @submit.prevent.stop="submit" class="for-form">
     <div class="for-inputs1-4">
-      <Uiinput1App v-model="review.fitText1" type="text" />
-      <Uiinput2App v-model="review.fitText2" type="text" />
-      <Uiinput3App v-model="review.fitText3" type="text" />
-      <Uiinput4App v-model="review.fitText4" type="email" />
+      <FirstNameInput v-model="review.fitText1" type="text" />
+      <LastNameInput v-model="review.fitText2" type="text" />
+      <CompanyInput v-model="review.fitText3" type="text" />
+      <EmailInput v-model="review.fitText4" type="email" />
     </div>
     <div class="for-inputs5-8">
-      <Uiinput5App v-model="review.fitText5" type="text" />
-      <Uiinput6App v-model="review.fitText6" type="text" />
-      <Uiinput7App v-model="review.fitText7" type="text" />
-      <Uiinput8App v-model="review.fitText8" type="number"></Uiinput8App>
+      <JobTitleInput v-model="review.fitText5" type="text" />
+      <CountryInput v-model="review.fitText6" type="text" />
+      <StateInput v-model="review.fitText7" type="text" />
+      <ZipCodeInput v-model="review.fitText8" type="number" />
     </div>
   </form>
 </template>
