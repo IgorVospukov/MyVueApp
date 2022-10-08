@@ -3,7 +3,7 @@
   <div class="container">
     <img class="my-logo" src="../assets/logo.png" alt="my-logo" />
     <div class="nav">
-      <ul class="nav justify-content-end">
+      <ul class="nav justify-content-end myclass1">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#" v-scroll-to="'#home'"
             >HOME
@@ -52,5 +52,10 @@
   justify-self: flex-end;
   align-self: center;
   margin-right: 20px;
+}
+@media (min-width: 376px) and (max-width: 1700px) {
+  .nav {
+    justify-self: center;
+  }
 }
 </style>

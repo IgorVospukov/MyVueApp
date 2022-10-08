@@ -54,7 +54,23 @@ const review = reactive({
   grid-row: 2/3;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px;
   column-gap: 14px;
   place-items: center;
+}
+@media (min-width: 376px) and (max-width: 1700px) {
+  .for-inputs1-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px;
+    column-gap: 7px;
+    place-items: center;
+  }
+  .for-inputs5-8 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 7px;
+    place-items: center;
+  }
 }
 </style>
