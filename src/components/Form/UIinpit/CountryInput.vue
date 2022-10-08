@@ -12,20 +12,31 @@ const props = defineProps({
   },
 });
 const value = ref(props.modelValue);
+const checkValid = ref(true);
+
 watch(value, () => {
   emits("update:modelValue", value);
 });
+const countryHandler = (e) => {
+  const re = /^[^._ ](?:[\w-]|\.[\w-])+[^._ ]$/;
+  if (!re.test(String(e.target.value).toLowerCase())) {
+    checkValid.value = false;
+    value.value = "error";
+  } else {
+    checkValid.value = true;
+    value.value = e.target.value;
+  }
+};
 </script>
 <template>
-  <div class="for-input6">
+  <div class="for-input">
     <p class="name">Country*</p>
     <input
-      class="single-input"
-      v-if="type === 'text'"
+      :class="[checkValid ? 'single-input' : 'warn']"
       :type="type"
       placeholder="Enter Your Country"
+      @change="countryHandler"
     />
-    <input v-else class="warn" />
   </div>
 </template>
 <style scoped>
@@ -44,7 +55,7 @@ watch(value, () => {
   width: 278px;
   height: 40px;
   border-radius: 10px;
-  border: red;
+  border: 2px outset red;
   padding-left: 5px;
 }
 </style>

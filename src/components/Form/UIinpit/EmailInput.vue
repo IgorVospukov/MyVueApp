@@ -11,21 +11,34 @@ const props = defineProps({
     },
   },
 });
+
 const value = ref(props.modelValue);
+const checkValid = ref(true);
+
 watch(value, () => {
   emits("update:modelValue", value);
 });
+const emailHandler = (e) => {
+  const re =
+    /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+  if (!re.test(String(e.target.value).toLowerCase())) {
+    checkValid.value = false;
+    value.value = "error";
+  } else {
+    checkValid.value = true;
+    value.value = e.target.value;
+  }
+};
 </script>
 <template>
-  <div class="for-input4">
+  <div class="for-input">
     <p class="name">Email*</p>
     <input
-      class="single-input"
-      v-if="type === 'email'"
+      :class="[checkValid ? 'single-input' : 'warn']"
       :type="type"
       placeholder="Enter Your Email"
+      @change="emailHandler"
     />
-    <input v-else class="warn" />
   </div>
 </template>
 <style scoped>
@@ -44,7 +57,7 @@ watch(value, () => {
   width: 278px;
   height: 40px;
   border-radius: 10px;
-  border: red;
+  border: 2px outset red;
   padding-left: 5px;
 }
 </style>

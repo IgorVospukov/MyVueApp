@@ -43,6 +43,7 @@
   padding-left: 120px;
   padding-right: 120px;
   padding-top: 100px;
+  margin-bottom: 120px;
 }
 .wrapper-left {
   grid-column: 1/2;

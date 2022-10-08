@@ -64,7 +64,6 @@ const DATA = ref([
   grid-template-rows: 125px 1fr;
   padding-left: 120px;
   padding-right: 120px;
-  margin-bottom: 60px;
   background-color: #f5f5f5;
   place-items: center;
 }
@@ -79,7 +78,7 @@ const DATA = ref([
   grid-template-columns: min-max(1fr, 1fr);
   grid-template-rows: auto;
   margin-top: 45px;
-  margin-bottom: 45px;
+  /* margin-bottom: 45px; */
 }
 .wrap-content {
   grid-column: 2/3;
@@ -104,7 +103,7 @@ const DATA = ref([
   grid-row: 3/4;
   display: grid;
   grid-template-columns: 200px 200px;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
   column-gap: 20px;
 }
 .button-left {
@@ -120,7 +119,6 @@ const DATA = ref([
   width: 200px;
 }
 .myclass2 {
-  width: 200px;
   width: 200px;
   background-color: #ffffff;
   color: #3d3d3d;
