@@ -3,6 +3,8 @@ import { ref } from "vue";
 import Image11 from "../assets/image11.png";
 import Image10 from "../assets/image10.png";
 import Image7 from "../assets/image7.png";
+import ButtonBlueApp from "./Button/ButtonBlueApp.vue";
+import ButtonWhiteApp from "./Button/ButtonWhiteApp.vue";
 const DATA = ref([
   {
     id: 1,
@@ -20,7 +22,7 @@ const DATA = ref([
   },
   {
     id: 3,
-    name: "Angular",
+    name: "Angular Js",
     content:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem consequuntur non voluptas architecto libero eum molestiae in debitis aliquid praesentium asperiores, quos, ex qui Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem consequuntur non voluptas architecto libero eum molestiae in debitis aliquid praesentium asperiores, quos, ex qui.",
     image: Image7,
@@ -31,10 +33,10 @@ const DATA = ref([
   <section id="frameworks" class="container-section3">
     <h1 class="frameworks">Frameworks</h1>
     <div class="wrapper-div" v-for="item in DATA" :key="item.id">
-      <div class="for-image">
+      <div :class="[item.id === 2 ? 'reverse-image' : 'for-image']">
         <img class="img" :src="item.image" alt="img" />
       </div>
-      <div class="wrap-content">
+      <div :class="[item.id === 2 ? 'reverse-content' : 'wrap-content']">
         <div class="name">
           {{ item.name }}
         </div>
@@ -42,16 +44,8 @@ const DATA = ref([
           {{ item.content }}
         </p>
         <div class="wrapper-buttons">
-          <div class="button-left">
-            <button type="button" class="btn btn-primary btn-lg myclass1">
-              Read More
-            </button>
-          </div>
-          <div class="button-right">
-            <button type="button" class="btn btn-secondary btn-lg myclass2">
-              Webinar
-            </button>
-          </div>
+          <ButtonBlueApp>Read More</ButtonBlueApp>
+          <ButtonWhiteApp>Webinar</ButtonWhiteApp>
         </div>
       </div>
     </div>
@@ -61,16 +55,19 @@ const DATA = ref([
 .container-section3 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 125px 1fr;
+  grid-template-rows: 120px 1fr;
   padding-left: 120px;
   padding-right: 120px;
-  background-color: #f5f5f5;
-  place-items: center;
+  padding-bottom: 60px;
+  background-color: #f5f7fa;
+  place-content: center;
 }
 .frameworks {
   grid-column: 1/2;
   grid-row: 1/2;
   justify-self: center;
+  align-self: center;
+  margin: 0;
 }
 .wrapper-div {
   grid-column: 1/2;
@@ -78,7 +75,20 @@ const DATA = ref([
   grid-template-columns: min-max(1fr, 1fr);
   grid-template-rows: auto;
   margin-top: 45px;
-  /* margin-bottom: 45px; */
+  background-color: #ffffff;
+}
+.reverse-image {
+  width: 100%;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.reverse-content {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px repeat(2, 1fr);
+  margin-left: 100px;
 }
 .wrap-content {
   grid-column: 2/3;
@@ -130,15 +140,19 @@ const DATA = ref([
   line-height: 26px;
 }
 @media (min-width: 376px) and (max-width: 1700px) {
-  .button-left {
-    align-self: flex-start;
-  }
-  .button-right {
-    align-self: flex-start;
-  }
-  .wrap-content {
+  .reverse-content {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 50px repeat(2, 1fr);
-    margin-left: 100px;
+    margin-right: 100px;
+    margin-left: 0;
+  }
+  .reverse-image {
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1/2;
   }
 }
 </style>

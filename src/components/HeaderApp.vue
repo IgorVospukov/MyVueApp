@@ -37,8 +37,8 @@
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
   color: #ffffff;
-  padding: 0;
   align-content: center;
+  padding: 0;
 }
 .my-logo {
   grid-column: 1/2;
@@ -51,7 +51,6 @@
   grid-column: 2/3;
   justify-self: flex-end;
   align-self: center;
-  margin-right: 20px;
 }
 @media (min-width: 376px) and (max-width: 1700px) {
   .nav {

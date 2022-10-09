@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import ButtonBlueApp from "./Button/ButtonBlueApp.vue";
+</script>
 <template>
   <section ref="4" class="container-section4">
     <div class="left-side">
@@ -9,9 +11,7 @@
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
           temporibus distinctio praesentium corporis cupiditate odio?
         </p>
-        <button type="button" class="btn btn-primary btn-lg myclass3">
-          Schedule a meeting
-        </button>
+        <ButtonBlueApp>Schedule a meeting</ButtonBlueApp>
       </div>
     </div>
     <div class="right-side">
@@ -22,9 +22,7 @@
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
           temporibus distinctio praesentium corporis cupiditate odio?
         </p>
-        <button type="button" class="btn btn-primary btn-lg myclass4">
-          Ask a question
-        </button>
+        <ButtonBlueApp>Ask a question</ButtonBlueApp>
       </div>
     </div>
   </section>

@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import ReviewForm from "./Form/ReviewForm.vue";
+import ButtonBlueApp from "./Button/ButtonBlueApp.vue";
 
 let flag = ref(false);
 const showModal = () => {
@@ -12,15 +13,8 @@ const showModal = () => {
   <section id="contact" class="container-section6">
     <h1 class="for-contacts">Contact Us</h1>
     <ReviewForm class="container-form" />
-    <div class="button-left">
-      <button
-        type="button"
-        class="btn btn-primary btn-lg myclass"
-        id="show-modal"
-        @click="showModal"
-      >
-        Submit
-      </button>
+    <div class="button-center">
+      <ButtonBlueApp @click="showModal">Submit</ButtonBlueApp>
     </div>
     <div class="my-mod" v-show="flag">
       <p class="text-modal">Form is sent !</p>
@@ -35,7 +29,6 @@ const showModal = () => {
   grid-template-rows: 115px 1fr 120px;
   padding-left: 120px;
   padding-right: 120px;
-  margin-bottom: 60px;
   background-color: #ffffff;
 }
 .for-contacts {
@@ -45,8 +38,9 @@ const showModal = () => {
   align-self: center;
   margin: 0;
 }
-.button-left {
-  align-self: center;
+.button-center {
+  margin-top: 20px;
+  align-self: flex-start;
   justify-self: center;
 }
 .myclass {

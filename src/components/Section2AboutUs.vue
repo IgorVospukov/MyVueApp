@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import ButtonWhiteApp from "./Button/ButtonWhiteApp.vue";
+import ButtonBlueApp from "./Button/ButtonBlueApp.vue";
+</script>
 <template>
   <section id="about" class="container-section2">
     <div class="wrapper-left">
@@ -14,16 +17,8 @@
         </p>
       </div>
       <div class="for-buttons">
-        <div class="button-left">
-          <button type="button" class="btn btn-primary btn-lg myclass">
-            Read More
-          </button>
-        </div>
-        <div class="button-right">
-          <button type="button" class="btn btn-secondary btn-lg myclass2">
-            Contact Us
-          </button>
-        </div>
+        <ButtonBlueApp>Read More</ButtonBlueApp>
+        <ButtonWhiteApp>Contact Us</ButtonWhiteApp>
       </div>
     </div>
     <div class="wrapper-right">
@@ -69,6 +64,7 @@
   grid-template-rows: auto;
   grid-column: 1/2;
   grid-row: 2/3;
+  column-gap: 10px;
 }
 .button-left {
   padding-right: 10px;
