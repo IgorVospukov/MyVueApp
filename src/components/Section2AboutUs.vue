@@ -6,8 +6,8 @@ import ButtonBlueApp from "./Button/ButtonBlueApp.vue";
   <section id="about" class="container-section2">
     <div class="wrapper-left">
       <div class="for-text">
-        <h2 class="about-us">About us</h2>
-        <p class="text">
+        <h2>About us</h2>
+        <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae
           tenetur reiciendis recusandae debitis enim deleniti unde doloremque
           voluptatem in tempore similique consequuntur ipsa est, numquam quod
@@ -30,7 +30,7 @@ import ButtonBlueApp from "./Button/ButtonBlueApp.vue";
 <style scoped>
 .img9 {
   width: 100%;
-  height: 300px;
+  max-height: 300px;
 }
 .container-section2 {
   display: grid;
@@ -52,6 +52,7 @@ import ButtonBlueApp from "./Button/ButtonBlueApp.vue";
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
+  place-content: center;
 }
 .for-text {
   grid-column: 1/2;
@@ -65,16 +66,5 @@ import ButtonBlueApp from "./Button/ButtonBlueApp.vue";
   grid-column: 1/2;
   grid-row: 2/3;
   column-gap: 10px;
-}
-.button-left {
-  padding-right: 10px;
-}
-.myclass {
-  width: 200px;
-}
-.myclass2 {
-  width: 200px;
-  background-color: #ffffff;
-  color: #3d3d3d;
 }
 </style>

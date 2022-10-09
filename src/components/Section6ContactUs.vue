@@ -43,9 +43,6 @@ const showModal = () => {
   align-self: flex-start;
   justify-self: center;
 }
-.myclass {
-  width: 200px;
-}
 .my-mod {
   position: absolute;
   display: grid;

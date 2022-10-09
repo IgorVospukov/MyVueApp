@@ -36,6 +36,11 @@ import ButtonBlueApp from "./Button/ButtonBlueApp.vue";
   padding-right: 120px;
   place-items: center;
 }
+.for-h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 15px;
+}
 .left-side {
   grid-column: 1/2;
   display: grid;
@@ -60,16 +65,6 @@ import ButtonBlueApp from "./Button/ButtonBlueApp.vue";
 .for-question {
   padding-left: 10px;
 }
-.myclass3 {
-  width: 200px;
-  justify-self: center;
-  padding-left: 0;
-  padding-right: 0;
-}
-.myclass4 {
-  width: 200px;
-  justify-self: center;
-}
 @media (min-width: 376px) and (max-width: 1700px) {
   .img12,
   .img14 {
@@ -86,11 +81,6 @@ import ButtonBlueApp from "./Button/ButtonBlueApp.vue";
     width: 200px;
     justify-self: center;
     margin-bottom: 15px;
-  }
-  .for-h2 {
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 15px;
   }
   .describe-left {
     font-size: 14px;

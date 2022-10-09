@@ -55,18 +55,17 @@ const DATA = ref([
 .container-section3 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 120px 1fr;
+  grid-template-rows: 100px 1fr;
   padding-left: 120px;
   padding-right: 120px;
   padding-bottom: 60px;
   background-color: #f5f7fa;
-  place-content: center;
 }
 .frameworks {
   grid-column: 1/2;
   grid-row: 1/2;
   justify-self: center;
-  align-self: center;
+  align-self: flex-end;
   margin: 0;
 }
 .wrapper-div {
@@ -78,7 +77,6 @@ const DATA = ref([
   background-color: #ffffff;
 }
 .reverse-image {
-  width: 100%;
   grid-column: 2/3;
   grid-row: 1/2;
 }
@@ -89,6 +87,7 @@ const DATA = ref([
   grid-template-columns: 1fr;
   grid-template-rows: 70px repeat(2, 1fr);
   margin-left: 100px;
+  padding-left: 15px;
 }
 .wrap-content {
   grid-column: 2/3;
@@ -96,15 +95,12 @@ const DATA = ref([
   grid-template-columns: 1fr;
   grid-template-rows: 70px repeat(2, 1fr);
   margin-left: 100px;
+  padding: 15px;
 }
 .img {
   grid-column: 1/2;
-  width: 100%;
-  max-height: 351px;
 }
-.for-image {
-  width: 100%;
-}
+
 .name {
   font-size: 24px;
   font-weight: 700;
@@ -115,24 +111,7 @@ const DATA = ref([
   grid-template-columns: 200px 200px;
   grid-template-rows: auto;
   column-gap: 20px;
-}
-.button-left {
-  grid-column: 1/2;
-  align-self: flex-end;
-  display: inline-block;
-}
-.button-right {
-  grid-column: 2/3;
-  align-self: flex-end;
-}
-.myclass1 {
-  width: 200px;
-}
-.myclass2 {
-  width: 200px;
-  background-color: #ffffff;
-  color: #3d3d3d;
-  border-color: grey;
+  align-content: center;
 }
 .content {
   font-size: 16px;

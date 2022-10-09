@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <section ref="1" class="container-section1">
+  <section id="home" class="container-section1">
     <div class="img8" width="100%">
       <div class="wrap-text">
         <p class="wel">Welcom to Taste Page</p>
