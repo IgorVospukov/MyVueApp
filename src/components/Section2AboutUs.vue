@@ -29,8 +29,8 @@ import ButtonBlueApp from "./Button/ButtonBlueApp.vue";
 
 <style scoped>
 .img9 {
-  width: 100%;
-  max-height: 300px;
+  max-width: 100%;
+  height: auto;
 }
 .container-section2 {
   display: grid;
